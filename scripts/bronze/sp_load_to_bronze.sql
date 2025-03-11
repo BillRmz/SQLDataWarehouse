@@ -33,7 +33,7 @@ DECLARE @end_time DATETIME;
 DECLARE @bulk_insert_statement VARCHAR(MAX);
 DECLARE @parsed_source_name VARCHAR(250);
 
-DROP TABLE #Temp_NumberedResults;
+TRUNCATE TABLE #Temp_NumberedResults;
 SET @source_name = 'source_crm'; --THIS SHOULD BE A SP PARAMETER
     PRINT '================================================';
 		PRINT 'Loading Bronze Layer';
@@ -100,3 +100,5 @@ BEGIN
     
 END;
 go 
+
+ 
