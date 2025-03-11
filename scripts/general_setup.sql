@@ -1,5 +1,7 @@
 CREATE DATABASE DataWarehouse;
 
+--give credits to this channel 
+--https://github.com/DataWithBaraa/sql-data-warehouse-project/blob/main/scripts/gold/ddl_gold.sql
 USE DataWarehouse;
 
 Go CREATE SCHEMA ADMIN;
