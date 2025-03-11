@@ -11,6 +11,8 @@ CREATE TABLE
         source NVARCHAR (50),
         table_name NVARCHAR (50),
         stage NVARCHAR (50),
+        status NVARCHAR (50),
+        error_message NVARCHAR (50),
         rows_moved NVARCHAR (50),
         start_time DATETIME,
         end_time DATETIME,
