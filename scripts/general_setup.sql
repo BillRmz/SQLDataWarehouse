@@ -1,4 +1,4 @@
-CREATE DATABASE DataWarehouse;
+USE DataWarehouse;
 
 --give credits to this channel 
 --https://github.com/DataWithBaraa/sql-data-warehouse-project/blob/main/scripts/gold/ddl_gold.sql
@@ -53,3 +53,21 @@ SELECT
     *
 FROM
     ADMIN.ADMIN_CONTROL_LOAD;
+
+SELECT
+    table_name,
+    source,
+    ROW_NUMBER() OVER (
+        ORDER BY
+            source
+    ) AS RowNum
+FROM
+    ADMIN.ADMIN_CONTROL_LOAD
+WHERE
+    source = 'source_crm'
+SELECT
+    COUNT(*)
+FROM
+    ADMIN.ADMIN_CONTROL_LOAD
+WHERE
+    source = 'source_crm'
